@@ -1,0 +1,4 @@
+kubeconfig_path = "/etc/rancher/k3s/k3s.yaml"
+k8s_namespace   = "default"
+repo_root       = ".."
+db_port         = 5432
