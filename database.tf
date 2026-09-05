@@ -31,8 +31,6 @@ resource "kubernetes_service" "postgres_external" {
       target_port = var.db_port
     }
   }
-
-  depends_on = [null_resource.ensure_k3s_running]
 }
 
 resource "kubernetes_endpoints" "postgres_external" {

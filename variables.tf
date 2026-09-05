@@ -21,3 +21,15 @@ variable "db_port" {
   type        = number
   default     = 5432
 }
+
+variable "aws_region" {
+  description = "Região AWS onde a instância do Tech Challenge está provisionada"
+  type        = string
+  default     = "us-east-1"
+}
+
+variable "app_server_security_group_id" {
+  description = "Security group da instância EC2 que roda o docker-compose do Postgres (tech-challenge-fase2-sg)"
+  type        = string
+  default     = "sg-0c26ea8d92fb553e1"
+}
