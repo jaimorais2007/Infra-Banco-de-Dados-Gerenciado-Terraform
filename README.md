@@ -29,10 +29,8 @@ Ordem de apply recomendada:
 4. Este repositório de novo (aplica a regra de security group liberando a Lambda)
 5. `Infraestrutura-Kubernetes-Terraform` de novo (API Gateway na frente da Lambda)
 
-## ⚠️ Permissões AWS necessárias
+## Free tier
 
-O usuário IAM usado no projeto (`dev-techchallenge`) hoje só tem permissão de
-leitura em EC2 e de gerenciar Security Groups. Isso **não é suficiente** para este
-repositório: aplicar `security.tf` exige `ec2:AuthorizeSecurityGroupIngress` (OK) e
-acesso de leitura ao state remoto da Lambda em S3 (`s3:GetObject` no bucket
-`meu-bucket-terraform-state`), que atualmente **não está liberado** para esse usuário.
+Nenhum recurso pago por hora é criado aqui (sem VPC Link, sem NAT Gateway). O bucket S3
+do state (`techchallenge-terraform-state-s3`) já existe e guarda apenas arquivos de state
+(poucos KB), dentro do free tier de armazenamento.

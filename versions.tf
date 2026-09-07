@@ -4,7 +4,7 @@ terraform {
   # State remoto: publica os outputs deste repositório (host_ip) e permite ler o
   # state do repositório Lambda-Function-Serverless (security group da Lambda).
   backend "s3" {
-    bucket = "meu-bucket-terraform-state"
+    bucket = "techchallenge-terraform-state-s3"
     key    = "database/terraform.tfstate"
     region = "us-east-1"
   }

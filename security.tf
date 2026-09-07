@@ -6,7 +6,7 @@
 data "terraform_remote_state" "lambda" {
   backend = "s3"
   config = {
-    bucket = "meu-bucket-terraform-state"
+    bucket = "techchallenge-terraform-state-s3"
     key    = "auth-service/terraform.tfstate"
     region = "us-east-1"
   }
